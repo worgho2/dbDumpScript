@@ -7,7 +7,7 @@ sem=$(date "+%A")		#Padrão de diretório (dia da semana)
 
 #DB config
 dbname=teste		#(--al-databases para fazer de todas as bases) Nome do bando de dados
-dbpass=Baziewicz@123		#Senha do banco de dados
+dbpass=senha		#Senha do banco de dados
 dbuser=root		#Senha do banco de dados
 
 #Cria diretório do backup
