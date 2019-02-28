@@ -1,7 +1,8 @@
 #!/bin/bash
 
 dir=$(pwd)		#Diretório do backup
-dir=$dir/db_backup		#Nome da pasta de backup
+folder=db_backup		#Nome da pasta de backup
+dir=$dir/$folder		
 backup_file=$(date "+%d_%m_%Y").sql		#Padrão do arquivo (dia_mes_ano.sql)
 sem=$(date "+%A")		#Padrão de diretório (dia da semana)
 
