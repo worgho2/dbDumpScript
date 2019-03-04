@@ -9,7 +9,8 @@ sem=$(date "+%A")		#Padrão de diretório (dia da semana)
 #DB config
 dbname=teste		#(--al-databases para fazer de todas as bases) Nome do bando de dados
 dbpass=senha		#Senha do banco de dados
-dbuser=root		#Senha do banco de dados
+dbuser=root		#Usuário do banco de dados
+dbhost=localhost	#Host do banco de dados		
 
 #Cria diretório do backup
 if [ ! -d "$dir" ]; then
@@ -44,7 +45,7 @@ if [ -e $dir/$sem/$(date +%d_%m_%Y -d "7 days ago").sql ]; then
 fi
 
 #Cria backup atual na pasta
-sudo mysqldump -u $dbuser -p$dbpass $dbname > $backup_file
+mysqldump -h $dbhost -u $dbuser -p$dbpass $dbname > $backup_file
 
 if [ -e $dir/$sem/$backup_file ]; then
 	echo -e "\033[1;32m[BACKUP CRIADO] $dir/$sem/$backup_file em $(date "+%d/%m/%Y")\033[0m"
