@@ -1,6 +1,8 @@
 # db_backup_shell_script
-Shell Script para fazer backup de banco de dados de maneira a salvar os 7 ultimos dias
 
-### O script cria uma pasta de backup em um local escolhido, e na pasta são criadas 7 sub-pastas (uma por dia). Em cada pasta somente um dump é salvo por vez.
+Shell Script to backup the database to save the last 7 days
 
-*Executar o script uma vez por dia*
+
+###The script creates a backup folder in a chosen location, and in the folder 7 subfolders are created (one per day). In each folder only one dump is saved at a time.
+
+*Run the script once a day*
